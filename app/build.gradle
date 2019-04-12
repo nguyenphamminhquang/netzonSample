@@ -25,12 +25,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
     implementation 'androidx.core:core-ktx:1.1.0-alpha05'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test:runner:1.2.0-alpha03'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha03'
 
     // Litho
     implementation 'com.facebook.litho:litho-core:0.25.0'
@@ -39,7 +40,7 @@ dependencies {
     annotationProcessor 'com.facebook.litho:litho-processor:0.25.0'
 
     // SoLoader
-    implementation 'com.facebook.soloader:soloader:0.5.1'
+    implementation 'com.facebook.soloader:soloader:0.6.0'
 
     // For integration with Fresco
     implementation 'com.facebook.litho:litho-fresco:0.25.0'
