@@ -34,18 +34,19 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0-alpha03'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha03'
+
     // Litho
     implementation 'com.facebook.litho:litho-core:0.25.0'
     implementation 'com.facebook.litho:litho-widget:0.25.0'
-
-    annotationProcessor 'com.facebook.litho:litho-processor:0.25.0'
-
+    provided "com.facebook.litho:litho-annotations:0.25.0"
+    // in addition(!) to the "provided" line
+    kapt "com.facebook.litho:litho-annotations:0.25.0"
+    // kapt instead of annotationprocessor or apt
+    kapt 'com.facebook.litho:litho-processor:0.25.0'
     // SoLoader
     implementation 'com.facebook.soloader:soloader:0.6.0'
-
     // For integration with Fresco
     implementation 'com.facebook.litho:litho-fresco:0.25.0'
-
     // For testing
     testImplementation 'com.facebook.litho:litho-testing:0.25.0'
 
@@ -54,5 +55,5 @@ dependencies {
     implementation 'com.facebook.litho:litho-sections-widget:0.25.0'
     compileOnly 'com.facebook.litho:litho-sections-annotations:0.25.0'
 
-    annotationProcessor 'com.facebook.litho:litho-sections-processor:0.25.0'
+    kapt 'com.facebook.litho:litho-sections-processor:0.25.0'
 }

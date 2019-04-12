@@ -1,11 +1,9 @@
 package com.netzon.sample
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.facebook.litho.ClickEvent
-import com.facebook.litho.Component
-import com.facebook.litho.ComponentContext
-import com.facebook.litho.LithoView
+import com.facebook.litho.*
 import com.facebook.litho.annotations.LayoutSpec
 import com.facebook.litho.annotations.OnCreateLayout
 import com.facebook.litho.annotations.OnEvent
@@ -29,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 @LayoutSpec
-object CustomText {
+object CustomTextSpec {
 
     @OnCreateLayout
     fun onCreateLayout(c: ComponentContext,
@@ -38,7 +36,6 @@ object CustomText {
             .alignSelf(YogaAlign.CENTER)
             .text(title)
             .textSizeDip(25F)
-            .clickHandler(onClick(c))
             .touchExpansionDip(YogaEdge.ALL, 10f)
             .build()
 
