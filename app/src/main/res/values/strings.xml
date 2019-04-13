@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">netzonSample</string>
+
+    <!--Invite user screen-->
+    <string name="invite">Invite</string>
     <string name="invite_user">Invite User</string>
+    <string name="email_address">Email Address</string>
+    <string name="user_type">&lt;User Type&gt;</string>
+    <string name="select_user_type">Select user type</string>
+    <string name="access_time">Access Time</string>
+    <string name="access_days">Access Days</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="hour_second">HR/S</string>
+    <string name="minute_second">MIN/S</string>
+
 </resources>

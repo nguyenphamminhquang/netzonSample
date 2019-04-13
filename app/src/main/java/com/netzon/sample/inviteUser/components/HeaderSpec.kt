@@ -10,7 +10,6 @@ import com.facebook.litho.widget.Image
 import com.facebook.litho.widget.Text
 import com.facebook.yoga.YogaAlign
 import com.facebook.yoga.YogaEdge
-import com.facebook.yoga.YogaPositionType
 import com.netzon.sample.R
 
 @LayoutSpec
@@ -25,8 +24,8 @@ object HeaderSpec {
             .child(
                 Image.create(c)
                     .alignSelf(YogaAlign.CENTER)
-                    .widthRes(R.dimen.btn_back)
-                    .heightRes(R.dimen.btn_back)
+                    .widthRes(R.dimen.ic_normal)
+                    .heightRes(R.dimen.ic_normal)
                     .clickHandler(Header.onClick(c))
                     .drawableRes(R.mipmap.ic_back))
             .child(
