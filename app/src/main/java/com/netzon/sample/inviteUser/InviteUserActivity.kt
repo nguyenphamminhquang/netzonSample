@@ -12,26 +12,23 @@
 
 package com.netzon.sample.inviteUser
 
+import android.app.Activity
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.facebook.litho.ComponentContext
 import com.facebook.litho.LithoView
 import com.facebook.litho.widget.Text
-import com.facebook.yoga.YogaAlign
+import com.netzon.sample.R
 
-class InviteUserActivity : AppCompatActivity() {
-
+class InviteUserActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val context = ComponentContext(this)
         val component = Text.create(context)
-            .alignSelf(YogaAlign.CENTER)
-            .text("Welcome To User Invitation")
+            .text(getString(R.string.invite_user))
             .textSizeDip(25F)
             .build()
         setContentView(LithoView.create(context, component))
     }
-
 }
 

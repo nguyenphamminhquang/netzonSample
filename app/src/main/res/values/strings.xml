@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">netzonSample</string>
+    <string name="invite_user">Invite User</string>
 </resources>
