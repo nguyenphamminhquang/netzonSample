@@ -2,7 +2,7 @@
     <string name="app_name">netzonSample</string>
 
     <!--Invite user screen-->
-    <string name="invite">Invite</string>
+    <string name="invite">INVITE</string>
     <string name="invite_user">Invite User</string>
     <string name="email_address">Email Address</string>
     <string name="user_type">&lt;User Type&gt;</string>
