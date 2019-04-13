@@ -30,7 +30,7 @@ object HeaderSpec {
                     .drawableRes(R.mipmap.ic_back))
             .child(
                 Text.create(c)
-                    .paddingRes(YogaEdge.LEFT, R.dimen.padding_normal)
+                    .paddingRes(YogaEdge.LEFT, R.dimen.space_normal)
                     .text(title)
                     .textSizeRes(R.dimen.text_title)
                     .textColor(c.getColor(android.R.color.black))

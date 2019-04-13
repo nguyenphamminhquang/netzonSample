@@ -24,18 +24,15 @@ object EmailAddressSpec {
                 Row.create(c)
                     .child(
                         Image.create(c)
-                            .marginRes(YogaEdge.LEFT, R.dimen.padding_normal)
+                            .marginRes(YogaEdge.LEFT, R.dimen.space_normal)
                             .alignSelf(YogaAlign.CENTER)
-                            .widthRes(R.dimen.ic_normal)
-                            .heightRes(R.dimen.ic_normal)
                             .clickHandler(Header.onClick(c))
                             .drawableRes(R.mipmap.ic_email))
                     .child(
                         TextInput.create(c)
                             .hint(c.getString(R.string.email_address))
-                            .paddingRes(YogaEdge.LEFT, R.dimen.padding_normal)
+                            .paddingRes(YogaEdge.LEFT, R.dimen.space_normal)
                             .textSizeRes(R.dimen.text_title)
-                            .paddingDip(YogaEdge.ALL, 10f)
                             .flex(1f)
                     ))
             .child(

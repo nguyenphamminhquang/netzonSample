@@ -9,6 +9,7 @@ import com.facebook.yoga.YogaEdge
 import com.netzon.sample.R
 import com.netzon.sample.inviteUser.components.EmailAddress
 import com.netzon.sample.inviteUser.components.Header
+import com.netzon.sample.inviteUser.components.UserType
 
 class InviteUserActivity : Activity() {
 
@@ -21,6 +22,7 @@ class InviteUserActivity : Activity() {
             .child(Header.create(c)
                 .title(getString(R.string.invite_user)))
             .child(EmailAddress.create(c))
+            .child(UserType.create(c))
             .build()
         setContentView(LithoView.create(c, component))
     }
