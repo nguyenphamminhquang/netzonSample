@@ -10,7 +10,6 @@ import com.facebook.litho.annotations.OnCreateLayout
 import com.facebook.litho.annotations.OnEvent
 import com.facebook.litho.annotations.Prop
 import com.facebook.litho.widget.Text
-import com.facebook.yoga.YogaAlign
 import com.facebook.yoga.YogaEdge
 import com.netzon.sample.R
 
@@ -19,12 +18,18 @@ object AccessDateItemSpec {
     @OnCreateLayout
     fun onCreateLayout(
         c: ComponentContext,
-        @Prop title: String
+        @Prop title: String,
+        @Prop currentPosition: Int,
+        @Prop selectedDayListener: (Int, Boolean) -> Unit
     ): Component {
         return Column.create(c)
             .flex(1f)
             .child(
-                CheckBoxLitho.create(c).initChecked(false)
+                CheckBoxLitho.create(c)
+                    .initChecked(false)
+                    .onCheckListener {
+                        selectedDayListener.invoke(currentPosition, it)
+                    }
             )
             .child(
                 Text.create(c)

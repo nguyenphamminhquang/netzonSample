@@ -4,9 +4,10 @@ import com.facebook.litho.Column
 import com.facebook.litho.Component
 import com.facebook.litho.ComponentContext
 import com.facebook.litho.Row
-import com.facebook.litho.annotations.LayoutSpec
-import com.facebook.litho.annotations.OnCreateLayout
+import com.facebook.litho.annotations.*
+import com.facebook.litho.widget.EditText
 import com.facebook.litho.widget.Image
+import com.facebook.litho.widget.TextChangedEvent
 import com.facebook.litho.widget.TextInput
 import com.facebook.yoga.YogaAlign
 import com.facebook.yoga.YogaEdge
@@ -34,6 +35,7 @@ object EmailAddressSpec {
                             .hint(c.getString(R.string.email_address))
                             .paddingRes(YogaEdge.LEFT, R.dimen.space_normal)
                             .textSizeRes(R.dimen.text_title)
+                            .textChangedEventHandler(EmailAddress.textChanged(c))
                             .flex(1f)
                     ))
             .child(
@@ -42,4 +44,8 @@ object EmailAddressSpec {
             )
             .build()
 
+    @OnEvent(TextChangedEvent::class)
+    fun textChanged(c : ComponentContext, @FromEvent text: String, @Prop textChangedEvent: (String) -> Unit){
+        textChangedEvent.invoke(text)
+    }
 }

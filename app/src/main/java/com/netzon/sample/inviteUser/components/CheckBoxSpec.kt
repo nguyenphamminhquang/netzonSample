@@ -21,8 +21,9 @@ object CheckBoxLithoSpec {
         .build()
 
     @OnEvent(ClickEvent::class)
-    fun onClick(c : ComponentContext) {
+    fun onClick(c : ComponentContext, @Prop onCheckListener: (Boolean?) -> Unit,@State isChecked: Boolean) {
         CheckBoxLitho.onUpdateState(c)
+        onCheckListener.invoke(isChecked.not())
     }
 
     @OnCreateInitialState
@@ -32,6 +33,8 @@ object CheckBoxLithoSpec {
 
     @OnUpdateState
     fun onUpdateState(isChecked:StateValue<Boolean>){
-        isChecked.set(isChecked.get()?.not())
+        val state = isChecked.get()?.not()
+        isChecked.set(state)
     }
+
 }
