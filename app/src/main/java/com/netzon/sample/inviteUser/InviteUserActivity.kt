@@ -35,6 +35,7 @@ class InviteUserActivity : Activity() {
                         Title.create(c)
                             .title(getString(R.string.access_days))
                     )
+                    .child(AccessDate.create(c))
             )
             .child(BtnInvite.create(c))
             .build()
