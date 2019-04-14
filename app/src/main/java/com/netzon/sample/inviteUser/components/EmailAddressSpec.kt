@@ -20,6 +20,7 @@ object EmailAddressSpec {
         c: ComponentContext
     ): Component =
         Column.create(c)
+            .marginRes(YogaEdge.TOP, R.dimen.space_large)
             .child(
                 Row.create(c)
                     .child(

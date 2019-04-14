@@ -1,6 +1,7 @@
 package com.netzon.sample.inviteUser
 
 import android.app.Activity
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Layout
 import com.facebook.litho.Column
@@ -19,6 +20,7 @@ class InviteUserActivity : Activity() {
         val component = Column.create(c)
             .child(
                 Column.create(c)
+                    .backgroundColor(Color.WHITE)
                     .paddingDip(YogaEdge.HORIZONTAL, 20f)
                     .paddingDip(YogaEdge.TOP, 20f)
                     .child(
@@ -30,6 +32,9 @@ class InviteUserActivity : Activity() {
                     .child(
                         Title.create(c)
                             .title(getString(R.string.access_time))
+                    )
+                    .child(
+                        AccessTime.create(c)
                     )
                     .child(
                         Title.create(c)

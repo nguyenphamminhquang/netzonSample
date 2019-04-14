@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="invite_bg">#961E46</color>
+    <color name="bg_invite_btn">#961E46</color>
+    <color name="bg_time">#DCDCDC</color>
 </resources>
